@@ -296,7 +296,7 @@ textarea.form-control {
 		display: block;
 		margin-bottom: 10px;
 	}
-	
+
 	.form-col {
 		width: 100%;
 		float: none;
@@ -425,6 +425,7 @@ textarea.form-control {
 	background-color: #131313;
 	padding-top: 75px;
 	text-align: center;
+	position: relative;
 }
 
 .inner::before {
@@ -442,7 +443,7 @@ textarea.form-control {
 
 .inner-content h6 {
 	font-size: 30px;
-    font-family: "Dosis", sans-serif;
+	font-family: "Dosis", sans-serif;
 	font-weight: 400;
 	color: rgba(254, 254, 254, 0.9);
 	letter-spacing: 1.7em;
@@ -454,6 +455,16 @@ textarea.form-control {
 	color: rgba(254, 254, 254, 0.2);
 	font-weight: 300;
 	font-size: 19px;
+}
+
+.inner-rhomb {
+	width: 16px;
+	height: 16px;
+	display: block;
+	position: absolute;
+	left: 49%;
+	bottom: 5%;
+	line-height: 16px;
 }
 
 @media (max-width: 991px) {
@@ -792,6 +803,10 @@ textarea.form-control {
 	}
 }
 
+.reviews {
+	overflow: hidden;
+}
+
 .reviews .carousel-indicators {
 	bottom: -100px;
 }
@@ -837,6 +852,53 @@ textarea.form-control {
 	line-height: 2.53em;
 	color: rgba(255, 255, 255, .3);
 	text-transform: uppercase;
+}
+
+.carousel-control {
+	background: none !important;
+	opacity: 0;
+	width: 85px;
+	transition: opacity .1s linear, transform .2s linear;
+	transform: translateX(-10px);
+}
+
+.carousel-control.right {
+	transform: translateX(10px);
+}
+
+.carousel-control::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 85px;
+	height: 85px;
+	background-color: #fff;
+	top: 50%;
+	left: -50%;
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.carousel-control.right::before {
+	left: auto;
+	right: -50%;
+}
+
+.reviews:hover .carousel-control {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.carousel-control i.fa {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #222;
+	left: 20px;
+}
+
+.carousel-control.right i.fa {
+	left: auto;
+	right: 20px;
 }
 
 @media (max-width: 991px) {
