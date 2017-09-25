@@ -116,10 +116,6 @@ blockquote span {
 	}
 }
 
-.tab-text {
-	margin-top: 74px;
-}
-
 .text-section {
 	font-size: 15px;
 	line-height: 1.73;
@@ -188,11 +184,6 @@ blockquote span {
 
 .small-section {
 	padding: 67px 0;
-}
-
-.small-section-p-t {
-	display: inline-block;
-	padding-top: 14px;
 }
 
 .icons {
@@ -269,7 +260,8 @@ blockquote span {
 
 .form-control.form-control-small {
 	max-width: 293px;
-	display: inline;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 textarea.form-control {
@@ -290,23 +282,11 @@ textarea.form-control {
 	float: left;
 }
 
-@media(max-width: 767px) {
-	.form-control.form-control-small {
-		max-width: 100%;
-		display: block;
-		margin-bottom: 10px;
-	}
-
-	.form-col {
-		width: 100%;
-		float: none;
-	}
-}
-
 @media (max-width: 1199px) {
 	.contact-item-icon {
 		margin-right: 6px;
 	}
+
 	.contact-item-content .contact-data {
 		font-size: 13px;
 	}
@@ -315,6 +295,19 @@ textarea.form-control {
 @media (max-width: 991px) {
 	.contact-item {
 		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.form-control.form-control-small {
+		max-width: 100%;
+		display: block;
+		margin-bottom: 10px;
+	}
+	
+	.form-col {
+		width: 100%;
+		float: none;
 	}
 }
 
@@ -353,6 +346,12 @@ textarea.form-control {
 .nav-tabs>li.active>a:hover {
 	border: none;
 	color: #111;
+}
+
+.map .rhomb-icon {
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
 }
 /* Header start*/
 .header {
@@ -443,7 +442,7 @@ textarea.form-control {
 
 .inner-content h6 {
 	font-size: 30px;
-	font-family: "Dosis", sans-serif;
+    font-family: "Dosis", sans-serif;
 	font-weight: 400;
 	color: rgba(254, 254, 254, 0.9);
 	letter-spacing: 1.7em;
@@ -458,44 +457,73 @@ textarea.form-control {
 }
 
 .inner-rhomb {
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	display: block;
 	position: absolute;
 	left: 49%;
 	bottom: 5%;
-	line-height: 16px;
+	line-height: 20px;
 }
 
 @media (max-width: 991px) {
 	.inner {
 		height: auto;
-		padding: 100px 0;
+		padding: 150px 0;
 	}
 
 	.inner-content h6{
 		white-space: normal;
 		font-size: 20px;
+		padding-bottom: 50px;
+		letter-spacing: 1em;
 	}
 
 	.inner-content span {
-		margin-top: 50px;
+		font-size: 16px;
+		padding-left: 12px;
 	}
 }
 
 @media (max-width: 767px) {
 	.inner {
 		height: auto;
-		padding: 100px 0;
+		padding: 150px 0;
 	}
 
 	.inner-content h6{
 		white-space: normal;
-		font-size: 18px;
+		font-size: 20px;
+
+
+	}
+
+	.inner-content span {
+		font-size: 14px;
+		padding-left: 12px;
 	}
 }
 
 @media (max-width: 599px) {
+	.inner {
+		height: auto;
+		padding: 140px 0;
+	}
+
+	.inner-content h6 {
+		white-space: normal;
+		font-size: 20px;
+		text-indent: 0;
+		line-height: 2em;
+		padding: 20px 107px 20px 130px;
+	}
+
+	.inner-content span {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 479px) {
 	.inner {
 		height: auto;
 		padding: 100px 0;
@@ -506,11 +534,11 @@ textarea.form-control {
 		font-size: 20px;
 		text-indent: 0;
 		line-height: 2em;
-		padding: 30px 0 30px 48px;
+		padding: 20px 29px 20px 64px;
 	}
 
 	.inner-content span {
-		padding: 0 5px;
+		font-size: 12px;
 	}
 }
 
@@ -573,11 +601,10 @@ textarea.form-control {
 }
 
 .choose-us .row + .row {
-	padding-top: 82px;
+	margin-top: 82px;
 }
 
 .team-qualities-info {
-	padding-top: 5px;
 	font-family: "Dosis", sans-serif;
 	color: #111;
 	font-weight: 400;
@@ -606,8 +633,12 @@ textarea.form-control {
 	}
 
 	.choose-us .row + .row {
-		padding-top: 0;
+		margin-top: 0;
 	}
+}
+
+.stay-informed .hint {
+	padding-top: 14px;
 }
 
 .contact-item-icon {
@@ -696,6 +727,10 @@ textarea.form-control {
 	opacity: 1;
 }
 
+.services .tab-content {
+	margin-top: 64px;
+}
+
 @media (max-width: 991px) {
 	.service-tabs .tablist-title {
 		font-size: 13px;
@@ -703,9 +738,21 @@ textarea.form-control {
 	}
 }
 
+@media (max-width: 767px) {
+	.services .service-tabs .tab-text {
+		margin-bottom: 10px;
+	}
+
+	.services .service-tabs ul li {
+	    width: 33.33333333%;
+		margin-bottom: 22px;
+	}
+}
+
 @media(max-width: 599px) {
 	.services .service-tabs ul li {
 		width: 50%;
+		margin-bottom: 22px;
 	}
 	.services .tab-content {
 		padding: 0 10px;
@@ -744,7 +791,7 @@ textarea.form-control {
 	opacity: 1;
 }
 
-.tab-content {
+.portfolio .tab-content {
 	margin-top: 48px;
 	overflow: hidden;
 }
@@ -768,27 +815,12 @@ textarea.form-control {
 	.portfolio .tabs-img {
 		width: 50%;
 	}
+	.portfolio-tabs .nav-tabs li + li {
+		margin-left: 18px;
+	}
 }
 
 @media (max-width: 599px) {
-	.portfolio .tabs-img {
-		width: 100%;
-	}
-
-	.portfolio-tabs ul li {
-		width: 50%;
-	}
-
-	.portfolio-tabs .nav-tabs li + li {
-		margin-left: 0;
-	}
-
-	.portfolio-tabs .nav-tabs li {
-		float: left;
-	}
-}
-
-@media (max-width: 479px) {
 	.portfolio .tabs-img {
 		width: 100%;
 	}
@@ -801,6 +833,7 @@ textarea.form-control {
 	.portfolio-tabs .nav-tabs li + li {
 		margin-left: 0;
 	}
+
 }
 
 .reviews {
@@ -903,13 +936,24 @@ textarea.form-control {
 
 @media (max-width: 991px) {
 	.carousel-caption p {
-		padding: 0 30px;
+		padding: 0 40px;
 	}
 }
 
 @media (max-width: 767px) {
 	.carousel-caption p {
 		padding: 0 50px;
+	}
+}
+
+@media (max-width: 479px) {
+	.carousel-caption p {
+		font-size: 12px;
+		padding: 0 60px;
+	}
+
+	.carousel-caption .reviews-author {
+		font-size: 8px;
 	}
 }
 
@@ -974,7 +1018,7 @@ ul.social-nav li {
 }
 
 ul.social-nav li + li{
-	padding-left: 15px;
+	margin-left: 15px;
 }
 
 .footer ul.social-nav li .rhomb-icon {
